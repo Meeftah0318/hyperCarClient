@@ -1,0 +1,9 @@
+hr {
+  border-top: 2px solid green;
+  border-bottom: 0px;
+  /* width: 75%; */
+}
+
+.car-brand {
+  color: rgb(94, 94, 94);
+}

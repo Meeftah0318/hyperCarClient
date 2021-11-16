@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "brand": "Porsche",
+    "model": "911 Carrera",
+    "price": 95000,
+    "image": "https://images.unsplash.com/photo-1611859266720-147cc87658f1?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1332&q=80"
+  },
+  {
+    "id": 2,
+    "brand": "Mercedes-Benz",
+    "model": "AMG CLS",
+    "price": 63000,
+    "image": "https://images.unsplash.com/photo-1581797726163-9bc86dc4b0e1?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1470&q=80"
+  },
+  {
+    "id": 3,
+    "brand": "Ferrari",
+    "model": "458 Spider",
+    "price": 150000,
+    "image": "https://images.unsplash.com/photo-1617434108848-6a1e827124ef?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1471&q=80"
+  },
+  {
+    "id": 4,
+    "brand": "Audi",
+    "model": "R8",
+    "price": 80500,
+    "image": "https://images.unsplash.com/photo-1614026480418-bd11fdb9fa06?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1471&q=80"
+  },
+  {
+    "id": 5,
+    "brand": "Lamborghini",
+    "model": "Aventador",
+    "price": 140000,
+    "image": "https://images.unsplash.com/photo-1614377284368-a6d4f911edc7?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1470&q=80"
+  },
+  {
+    "id": 6,
+    "brand": "Maserati",
+    "model": "Granturismo",
+    "price": 110000,
+    "image": "https://images.unsplash.com/photo-1589134723101-5abd32593adf?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1332&q=80"
+  }
+]
