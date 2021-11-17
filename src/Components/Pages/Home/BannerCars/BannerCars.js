@@ -4,7 +4,7 @@ import Car from "../Car/Car";
 const BannerCars = () => {
   const [cars, setCars] = useState([]);
   useEffect(() => {
-    fetch("/cars.json")
+    fetch("https://blooming-mesa-69850.herokuapp.com/cars")
       .then(res => res.json())
       .then(data => setCars(data));
   }, []);
@@ -17,7 +17,7 @@ const BannerCars = () => {
           <hr />
         </div>
       </div>
-      <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 g-4 w-75 mx-auto pb-5 my-3 px-0">
+      <div className="row row-cols-1 row-cols-md-3 row-cols-xl-4 g-4 w-75 mx-auto pb-5 my-3 px-0">
         {cars.slice(0, 6).map(car => (
           <Car
             key={car.id}

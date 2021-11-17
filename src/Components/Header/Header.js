@@ -39,14 +39,18 @@ const Header = () => {
                     <Link className="ms-4" to="/home">
                       Home
                     </Link>
-                    <Link className="ms-4" to="explore">
-                      Explore
+                    <Link className="ms-4" to="cars">
+                      Car Gallery
                     </Link>
-                    <Link className="ms-4" to="addPackage">
-                      Add Package
+                    <Link className="ms-4" to="addCar">
+                      Add Item
                     </Link>
-                    <Link className="ms-4" to="manageDB">
-                      Manage DB
+                    <Link
+                      className="ms-4"
+                      to="carDB
+                    "
+                    >
+                      Manage Items
                     </Link>
                   </ul>
                 </div>

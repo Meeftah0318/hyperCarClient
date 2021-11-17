@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import "./Car.css";
 
 const Car = props => {
-  const { brand, model, price, image, id } = props.car;
+  const { brand, model, price, image, _id } = props.car;
   return (
     <div className="container car-container">
       <div className="card-group">
@@ -27,7 +27,7 @@ const Car = props => {
               <button className="btn my-2 px-4 py-1 btn-success w-100">
                 <Link
                   className="text-decoration-none fs-5 text-white"
-                  to={`/${id}`}
+                  to={`/${_id}`}
                 >
                   <span className="me-3">
                     <i class="fas fa-car"></i>

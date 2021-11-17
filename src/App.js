@@ -6,6 +6,9 @@ import Header from "./Components/Header/Header";
 import Home from "./Components/Pages/Home/Home";
 import NotFound from "./Components/Pages/NotFound/NotFound";
 import Footer from "./Components/Footer/Footer";
+import AddCar from "./Components/Pages/AddCar/AddCar";
+import CarDB from "./Components/Pages/CarDB/CarDB";
+import UpdateItem from "./Components/Pages/UpdateItem/UpdateItem";
 function App() {
   return (
     <div className="">
@@ -18,10 +21,19 @@ function App() {
           <Route path="/home">
             <Home></Home>
           </Route>
-          <Route path="/explore">
+          <Route path="/cars">
             <Cars></Cars>
           </Route>
-          <Route exact path="/*">
+          <Route path="/addCar">
+            <AddCar></AddCar>
+          </Route>
+          <Route path="/cardb">
+            <CarDB></CarDB>
+          </Route>
+          <Route path="/car/update/:id">
+            <UpdateItem></UpdateItem>
+          </Route>
+          <Route path="/*">
             <NotFound></NotFound>
           </Route>
         </Switch>
