@@ -11,7 +11,7 @@ const Footer = () => {
             <h5>Actions</h5>
             <Link to="">About us</Link>
             <br />
-            <Link to="">Refund policy</Link>
+            <Link to="">Insurance</Link>
             <br />
             <Link to="">Book Online</Link>
             <br />

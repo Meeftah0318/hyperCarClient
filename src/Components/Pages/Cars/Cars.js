@@ -20,11 +20,7 @@ const Cars = () => {
       </div>
       <div className="row row-cols-1 row-cols-md-3 row-cols-xl-4 g-4 w-75 mx-auto pb-5 my-3 px-0">
         {cars.map(car => (
-          <Car
-            key={car.id}
-            car={car}
-            // handleBooking={handlebooking}
-          ></Car>
+          <Car key={car.id} car={car}></Car>
         ))}
       </div>
     </div>

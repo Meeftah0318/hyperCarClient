@@ -27,7 +27,7 @@ const Car = props => {
               <button className="btn my-2 px-4 py-1 btn-success w-100">
                 <Link
                   className="text-decoration-none fs-5 text-white"
-                  to={`/${_id}`}
+                  to={`purchase/${_id}`}
                 >
                   <span className="me-3">
                     <i class="fas fa-car"></i>

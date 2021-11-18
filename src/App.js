@@ -9,6 +9,9 @@ import Footer from "./Components/Footer/Footer";
 import AddCar from "./Components/Pages/AddCar/AddCar";
 import CarDB from "./Components/Pages/CarDB/CarDB";
 import UpdateItem from "./Components/Pages/UpdateItem/UpdateItem";
+import Purchase from "./Components/Pages/Purchase/Purchase";
+import Login from "./Components/Pages/Login/Login";
+import Register from "./Components/Pages/Register/Register";
 function App() {
   return (
     <div className="">
@@ -29,6 +32,15 @@ function App() {
           </Route>
           <Route path="/cardb">
             <CarDB></CarDB>
+          </Route>
+          <Route path="/login">
+            <Login></Login>
+          </Route>
+          <Route path="/register">
+            <Register></Register>
+          </Route>
+          <Route path="/purchase/:id">
+            <Purchase></Purchase>
           </Route>
           <Route path="/car/update/:id">
             <UpdateItem></UpdateItem>
