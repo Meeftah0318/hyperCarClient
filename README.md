@@ -6,11 +6,11 @@ This site is developed with the love for super cars and best in the market hyper
 
 ## Core Functionality
 
-### Used react
+### `Used react`
 
 ### This site is made using react router
 
-### for google login and authentication firebase was used, Email Login is under development
+### For google login and authentication firebase was used, Email Login is under development
 
 ### Used Dynamic routes to show the individual items
 
