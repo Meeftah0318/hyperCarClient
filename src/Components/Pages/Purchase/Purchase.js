@@ -6,9 +6,7 @@ const Purchase = () => {
 
   const [car, setCar] = useState({});
   useEffect(() => {
-    fetch(
-      `https://blooming-mesa-69850.herokuapp.com/cars/6195446a7c92f0225b9aaf11`
-    )
+    fetch(`https://blooming-mesa-69850.herokuapp.com/cars/${id}`)
       .then(res => res.json())
       .then(data => setCar(data));
   }, []);

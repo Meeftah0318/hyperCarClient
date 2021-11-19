@@ -1,10 +1,10 @@
 import React from "react";
 import "./Header.css";
 import { Link } from "react-router-dom";
-// import useFirebase from "../../Hooks/useFirebase";
+import useAuth from "../../hooks/useAuth";
 
 const Header = () => {
-  //   const { user, logOut } = useFirebase();
+  const { user, logOut } = useAuth();
   return (
     <div>
       <div>
@@ -62,13 +62,17 @@ const Header = () => {
       <div>
         <div className="bg-dark">
           <div className="d-flex justify-content-end w-75 mx-auto pb-1">
-            <button className="btn btn-success fs-6 px-4">
-              {" "}
+            {user?.email ? (
+              <Link className="text-decoration-none text-white ">
+                <button onClick={logOut} className="btn btn-success fs-6 px-4">
+                  Sign Out
+                </button>
+              </Link>
+            ) : (
               <Link className="text-decoration-none text-white " to="login">
-                Log In
-              </Link>{" "}
-            </button>
-            {/*  */}
+                <button className="btn btn-success fs-6 px-4">Sign In</button>
+              </Link>
+            )}
           </div>
         </div>
       </div>

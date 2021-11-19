@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
-const Register = () => {
+const Login = () => {
   const [loginData, setLoginData] = useState({});
 
   const handleOnChange = e => {
@@ -12,11 +12,7 @@ const Register = () => {
     setLoginData(newLoginData);
   };
 
-  const handelRegisterSubmit = e => {
-    if (loginData.password !== loginData.password2) {
-      alert("Your Password Did Not Match");
-      return;
-    }
+  const handelLoginSubmit = e => {
     e.preventDefault();
   };
   return (
@@ -26,17 +22,17 @@ const Register = () => {
           <div className="col-md-5 p-0">
             <img
               className="img-fluid h-100"
-              src="https://images.unsplash.com/photo-1491975474562-1f4e30bc9468?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
+              src="https://images.unsplash.com/photo-1605858286629-4268180c482b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=737&q=80"
               alt=""
             />
           </div>
           <div className="col-md-7 p-0 border border-secondary ">
-            <h2 className="text-center mt-3 ">Please Register</h2>
-            <div className="w-25 mx-auto ">
+            <h2 className="text-center mt-3 ">Please Login</h2>
+            <div className="w-75 mx-auto mb-4">
               <hr />
             </div>
-            <form onSubmit={handelRegisterSubmit} className="m-4">
-              <div className="mb-2">
+            <form onSubmit={handelLoginSubmit} className="px-4 ">
+              <div>
                 <label
                   htmlFor="exampleFormControlInput1"
                   className="form-label"
@@ -44,10 +40,10 @@ const Register = () => {
                   Email
                 </label>
                 <input
-                  type="email"
+                  type="text"
                   name="email"
                   onChange={handleOnChange}
-                  className="form-control  border-secondary border-2"
+                  className="form-control mb-4  border-secondary border-2"
                   placeholder="Your Email"
                   required
                 />
@@ -64,22 +60,7 @@ const Register = () => {
                   name="password"
                   onChange={handleOnChange}
                   placeholder="Type Password"
-                  className="form-control border-secondary border-2"
-                  required
-                />
-              </div>
-              <div className="mb-2">
-                <label
-                  htmlFor="exampleFormControlInput1"
-                  className="form-label"
-                >
-                  Price
-                </label>
-                <input
-                  type="password"
-                  name="password2"
-                  placeholder="Retype Password"
-                  className="form-control border-secondary border-2 mb-3"
+                  className="form-control border-secondary border-2 mb-4"
                   required
                 />
               </div>
@@ -90,7 +71,7 @@ const Register = () => {
                     type="submit"
                     className="btn btn-primary mt-3 fs-5 w-100 "
                   >
-                    Register
+                    Login
                   </button>
                 </div>
                 <div className="col-md-8">
@@ -99,7 +80,7 @@ const Register = () => {
                       type="submit"
                       className="btn btn-outline-dark  fs-5 mt-3 w-100"
                     >
-                      Please Login
+                      Please Register
                     </button>
                   </Link>
                 </div>
@@ -112,4 +93,4 @@ const Register = () => {
   );
 };
 
-export default Register;
+export default Login;
