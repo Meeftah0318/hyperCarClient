@@ -2,31 +2,29 @@ import React, { useRef } from "react";
 
 const UserReview = () => {
   const nameRef = useRef();
-  const modelRef = useRef();
-  const priceRef = useRef();
-  const imgRef = useRef();
+  const brandRef = useRef();
+  const feedbackRef = useRef();
 
   const handleReview = e => {
-    const brand = nameRef.current.value;
-    const model = modelRef.current.value;
-    const image = imgRef.current.value;
-    const price = priceRef.current.value;
+    const userName = nameRef.current.value;
+    const brand = brandRef.current.value;
+    const feedback = feedbackRef.current.value;
 
     // new item
-    const newCar = { brand, model, image, price };
+    const newReview = { userName, brand, feedback };
 
     // fetch data
-    fetch("https://blooming-mesa-69850.herokuapp.com/review", {
+    fetch("https://blooming-mesa-69850.herokuapp.com/reviews", {
       method: "POST",
       headers: {
         "content-type": "application/json",
       },
-      body: JSON.stringify(newCar),
+      body: JSON.stringify(newReview),
     })
       .then(res => res.json())
       .then(data => {
         if (data.insertedId) {
-          alert("You have added an item Successfully");
+          alert("We received your feedback");
           e.target.reset();
         }
       });
@@ -37,7 +35,7 @@ const UserReview = () => {
   return (
     <div>
       <div className="w-75 mx-auto py-5">
-        <h2 className="text-center  ">Add a New Product</h2>
+        <h2 className="text-center  ">Your Feedback is Always Important </h2>
         <div className="w-25 mx-auto mb-4">
           <hr />
         </div>
@@ -77,9 +75,9 @@ const UserReview = () => {
               <div className="col-auto">
                 <button
                   type="submit"
-                  className="btn btn-dark mt-3 px-3 rounded-pill"
+                  className="btn btn-success mt-3 px-3 rounded-pill"
                 >
-                  Add Product
+                  Post Review
                 </button>
               </div>
             </form>
