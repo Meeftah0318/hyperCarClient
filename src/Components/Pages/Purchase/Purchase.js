@@ -5,6 +5,7 @@ const Purchase = () => {
   const { id } = useParams();
 
   const [car, setCar] = useState({});
+
   useEffect(() => {
     fetch(`https://blooming-mesa-69850.herokuapp.com/cars/${id}`)
       .then(res => res.json())

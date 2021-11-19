@@ -42,16 +42,6 @@ const Header = () => {
                     <Link className="ms-4" to="cars">
                       Car Gallery
                     </Link>
-                    <Link className="ms-4" to="addCar">
-                      Add Item
-                    </Link>
-                    <Link
-                      className="ms-4"
-                      to="carDB
-                    "
-                    >
-                      Manage Items
-                    </Link>
                   </ul>
                 </div>
               </div>
@@ -62,12 +52,42 @@ const Header = () => {
       <div>
         <div className="bg-dark">
           <div className="d-flex justify-content-end w-75 mx-auto pb-1">
+            {/* <div className="text-white me-3">
+              {user?.email ? `Welcome ${user.displayName}` : " "}
+            </div> */}
             {user?.email ? (
-              <Link className="text-decoration-none text-white ">
-                <button onClick={logOut} className="btn btn-success fs-6 px-4">
-                  Sign Out
-                </button>
-              </Link>
+              <div>
+                <Link className="text-decoration-none">
+                  <Link
+                    className="text-decoration-none text-white fs-6 me-3"
+                    to="dashboard"
+                  >
+                    Dashboard
+                  </Link>
+                  <Link
+                    className="text-decoration-none text-white fs-6 me-3"
+                    to="addCar"
+                  >
+                    Add Item
+                  </Link>
+                  <Link
+                    className="text-decoration-none text-white fs-6 me-3"
+                    to="carDB"
+                  >
+                    Manage Items
+                  </Link>
+                  <Link
+                    className="text-decoration-none text-white fs-6 me-3"
+                    to="review"
+                  >
+                    Feedback
+                  </Link>
+
+                  <button onClick={logOut} className="btn btn-danger fs-6 px-3">
+                    Sign Out
+                  </button>
+                </Link>
+              </div>
             ) : (
               <Link className="text-decoration-none text-white " to="login">
                 <button className="btn btn-success fs-6 px-4">Sign In</button>

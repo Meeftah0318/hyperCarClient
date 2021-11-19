@@ -1,8 +1,14 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useHistory } from "react-router-dom";
+import useAuth from "../../../../hooks/useAuth";
 
 const Login = () => {
-  const [loginData, setLoginData] = useState({});
+  const [loginData, setLoginData, loginUser] = useState({});
+
+  const { signInWithGoogle } = useAuth();
+
+  const location = useLocation();
+  const history = useHistory();
 
   const handleOnChange = e => {
     const field = e.target.name;
@@ -13,6 +19,7 @@ const Login = () => {
   };
 
   const handelLoginSubmit = e => {
+    loginUser(loginData.email, loginData.password, location, history);
     e.preventDefault();
   };
   return (
@@ -43,7 +50,7 @@ const Login = () => {
                   type="text"
                   name="email"
                   onChange={handleOnChange}
-                  className="form-control mb-4  border-secondary border-2"
+                  className="form-control mb-2  border-secondary border-2"
                   placeholder="Your Email"
                   required
                 />
@@ -60,7 +67,7 @@ const Login = () => {
                   name="password"
                   onChange={handleOnChange}
                   placeholder="Type Password"
-                  className="form-control border-secondary border-2 mb-4"
+                  className="form-control border-secondary border-2 mb-2"
                   required
                 />
               </div>
@@ -71,7 +78,7 @@ const Login = () => {
                     type="submit"
                     className="btn btn-primary mt-3 fs-5 w-100 "
                   >
-                    Login
+                    Sign In
                   </button>
                 </div>
                 <div className="col-md-8">
@@ -84,6 +91,14 @@ const Login = () => {
                     </button>
                   </Link>
                 </div>
+              </div>
+              <div>
+                <button
+                  className="btn btn-primary  fs-5 mt-3 w-100"
+                  onClick={signInWithGoogle}
+                >
+                  Google Sign In
+                </button>
               </div>
             </form>
           </div>

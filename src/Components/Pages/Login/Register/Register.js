@@ -5,7 +5,7 @@ import useAuth from "../../../../hooks/useAuth";
 const Register = () => {
   const [loginData, setLoginData] = useState({});
 
-  const { registerUser } = useAuth();
+  const { registerUser, signInWithGoogle } = useAuth();
 
   const handleOnChange = e => {
     const field = e.target.name;
@@ -13,7 +13,7 @@ const Register = () => {
     const newLoginData = { ...loginData };
     newLoginData[field] = value;
     setLoginData(newLoginData);
-    console.log(value);
+    // console.log(value);
   };
 
   const handelRegisterSubmit = e => {
@@ -101,14 +101,19 @@ const Register = () => {
                 </div>
                 <div className="col-md-8">
                   <Link to="login">
-                    <button
-                      type="submit"
-                      className="btn btn-outline-dark  fs-5 mt-3 w-100"
-                    >
+                    <button className="btn btn-outline-dark  fs-5 mt-3 w-100">
                       Please Login
                     </button>
                   </Link>
                 </div>
+              </div>
+              <div>
+                <button
+                  className="btn btn-primary  fs-5 mt-3 w-100"
+                  onClick={signInWithGoogle}
+                >
+                  Google Sign In
+                </button>
               </div>
             </form>
           </div>

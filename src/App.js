@@ -13,6 +13,9 @@ import Purchase from "./Components/Pages/Purchase/Purchase";
 import Login from "./Components/Pages/Login/Login/Login";
 import Register from "./Components/Pages/Login/Register/Register";
 import AuthProvider from "./Contexts/AuthProvider/AuthProvider";
+import PrivateRoute from "./Components/Pages/Login/PrivateRoute/PrivateRoute";
+import Dashboard from "./Components/Pages/Dashboard/Dashboard/Dashboard";
+import UserReview from "./Components/Pages/Dashboard/UserReview/UserReview";
 function App() {
   return (
     <div className="">
@@ -26,14 +29,20 @@ function App() {
             <Route path="/home">
               <Home></Home>
             </Route>
+            <PrivateRoute path="/dashboard">
+              <Dashboard></Dashboard>
+            </PrivateRoute>
+            <PrivateRoute path="/addCar">
+              <AddCar></AddCar>
+            </PrivateRoute>
+            <PrivateRoute path="/cardb">
+              <CarDB></CarDB>
+            </PrivateRoute>
+            <PrivateRoute path="/review">
+              <UserReview></UserReview>
+            </PrivateRoute>
             <Route path="/cars">
               <Cars></Cars>
-            </Route>
-            <Route path="/addCar">
-              <AddCar></AddCar>
-            </Route>
-            <Route path="/cardb">
-              <CarDB></CarDB>
             </Route>
             <Route path="/login">
               <Login></Login>
@@ -41,9 +50,9 @@ function App() {
             <Route path="/register">
               <Register></Register>
             </Route>
-            <Route path="/purchase/:id">
+            <PrivateRoute path="/purchase/:id">
               <Purchase></Purchase>
-            </Route>
+            </PrivateRoute>
             <Route path="/car/update/:id">
               <UpdateItem></UpdateItem>
             </Route>

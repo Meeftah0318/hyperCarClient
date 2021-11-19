@@ -1,12 +1,12 @@
 import React, { useRef } from "react";
 
-const AddCar = () => {
+const UserReview = () => {
   const nameRef = useRef();
   const modelRef = useRef();
   const priceRef = useRef();
   const imgRef = useRef();
 
-  const handleAddCar = e => {
+  const handleReview = e => {
     const brand = nameRef.current.value;
     const model = modelRef.current.value;
     const image = imgRef.current.value;
@@ -16,7 +16,7 @@ const AddCar = () => {
     const newCar = { brand, model, image, price };
 
     // fetch data
-    fetch("https://blooming-mesa-69850.herokuapp.com/addCar", {
+    fetch("https://blooming-mesa-69850.herokuapp.com/review", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -44,7 +44,7 @@ const AddCar = () => {
         <div className="row">
           <div className="col-md-8 p-0">
             <form
-              onSubmit={handleAddCar}
+              onSubmit={handleReview}
               className="border border-secondary p-4 pe-5 h-100 "
             >
               <div className="mb-2">
@@ -52,60 +52,26 @@ const AddCar = () => {
                   htmlFor="exampleFormControlInput1"
                   className="form-label"
                 >
-                  Brand Name
+                  Name
                 </label>
                 <input
                   type="text"
                   ref={nameRef}
                   className="form-control  border-secondary rounded-pill"
-                  placeholder="Brand"
+                  placeholder="Name"
                   required
                 />
               </div>
-              <div className="mb-2">
-                <label
-                  htmlFor="exampleFormControlInput1"
-                  className="form-label"
-                >
-                  Model
+              <div class="mb-3">
+                <label for="exampleFormControlTextarea1" className="form-label">
+                  Feedback
                 </label>
-                <input
-                  type="text"
-                  ref={modelRef}
-                  placeholder="Car Model"
-                  className="form-control border-secondary rounded-pill"
-                  required
-                />
-              </div>
-              <div className="mb-2">
-                <label
-                  htmlFor="exampleFormControlInput1"
-                  className="form-label"
-                >
-                  Price
-                </label>
-                <input
-                  type="number"
-                  ref={priceRef}
-                  placeholder="Retail price"
-                  className="form-control border-secondary rounded-pill"
-                  required
-                />
-              </div>
-              <div className="mb-2">
-                <label
-                  htmlFor="exampleFormControlInput1"
-                  className="form-label"
-                >
-                  Image URL
-                </label>
-                <input
-                  type="text"
-                  ref={imgRef}
-                  placeholder="Provide Image URL"
-                  className="form-control border-secondary rounded-pill"
-                  required
-                />
+                <textarea
+                  className="form-control border border-dark"
+                  id="exampleFormControlTextarea1"
+                  rows="3"
+                  placeholder="Give Feedback"
+                ></textarea>
               </div>
 
               <div className="col-auto">
@@ -131,4 +97,4 @@ const AddCar = () => {
   );
 };
 
-export default AddCar;
+export default UserReview;
