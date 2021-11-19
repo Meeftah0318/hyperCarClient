@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
-import Review from "../Review/Review";
+import Review from "../Home/Review/Review";
 
-const Reviews = () => {
+const ReviewPg = () => {
   const [reviews, setReviews] = useState([]);
   useEffect(() => {
     fetch("/review.json")
@@ -19,18 +18,16 @@ const Reviews = () => {
         </div>
       </div>
       <div className="row row-cols-1 row-cols-md-4 pb-5 my-3 px-0 g-2 w-75 mx-auto ">
-        {reviews.slice(reviews.length - 4, reviews.length).map(review => (
+        {reviews.map(review => (
           <Review
             key={review.id}
             review={review}
             // handleBooking={handlebooking}
           ></Review>
         ))}
-
-        <Link to="reviews">See All Reviews</Link>
       </div>
     </div>
   );
 };
 
-export default Reviews;
+export default ReviewPg;

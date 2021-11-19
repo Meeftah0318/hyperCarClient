@@ -60,12 +60,28 @@ const UserReview = () => {
                   required
                 />
               </div>
+              <div className="mb-2">
+                <label
+                  htmlFor="exampleFormControlInput1"
+                  className="form-label"
+                >
+                  Vehicle
+                </label>
+                <input
+                  type="text"
+                  ref={brandRef}
+                  className="form-control  border-secondary rounded-pill"
+                  placeholder="Name"
+                  required
+                />
+              </div>
               <div class="mb-3">
                 <label for="exampleFormControlTextarea1" className="form-label">
                   Feedback
                 </label>
                 <textarea
                   className="form-control border border-dark"
+                  ref={feedbackRef}
                   id="exampleFormControlTextarea1"
                   rows="3"
                   placeholder="Give Feedback"

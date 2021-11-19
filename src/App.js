@@ -16,6 +16,8 @@ import AuthProvider from "./Contexts/AuthProvider/AuthProvider";
 import PrivateRoute from "./Components/Pages/Login/PrivateRoute/PrivateRoute";
 import Dashboard from "./Components/Pages/Dashboard/Dashboard/Dashboard";
 import UserReview from "./Components/Pages/Dashboard/UserReview/UserReview";
+import Reviews from "./Components/Pages/Home/Reviews/Reviews";
+import ReviewPg from "./Components/Pages/ReviewPg/ReviewPg";
 function App() {
   return (
     <div className="">
@@ -43,6 +45,9 @@ function App() {
             </PrivateRoute>
             <Route path="/cars">
               <Cars></Cars>
+            </Route>
+            <Route path="/reviews">
+              <ReviewPg></ReviewPg>
             </Route>
             <Route path="/login">
               <Login></Login>

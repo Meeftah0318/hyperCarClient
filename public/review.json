@@ -18,6 +18,18 @@
     "review": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi aspernatur qui "
   },
   {
+    "id": 3,
+    "name": "Audi",
+    "rating": 4.5,
+    "review": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi aspernatur qui "
+  },
+  {
+    "id": 3,
+    "name": "Audi",
+    "rating": 4.5,
+    "review": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi aspernatur qui "
+  },
+  {
     "id": 4,
     "name": "Lambo",
     "rating": 5,
