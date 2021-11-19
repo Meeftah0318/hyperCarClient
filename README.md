@@ -1,6 +1,20 @@
 # Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was bootstrapped with [Create React App](https://hypercar-40f50.web.app).
+
+This site is developed with the love for super cars and best in the market hyper cars, the site solely does not focus on hyper cars but focuses on best quality cars that are available in the market.
+
+## Core Functionality
+
+### Used react
+
+### This site is made using react router
+
+### for google login and authentication firebase was used, Email Login is under development
+
+### Used Dynamic routes to show the individual items
+
+### Used private route to hide different paths for user not logged in
 
 ## Available Scripts
 
