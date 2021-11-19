@@ -3,15 +3,17 @@ import React, { useRef } from "react";
 const UserReview = () => {
   const nameRef = useRef();
   const brandRef = useRef();
+  const ratingRef = useRef();
   const feedbackRef = useRef();
 
   const handleReview = e => {
     const userName = nameRef.current.value;
     const brand = brandRef.current.value;
+    const rating = ratingRef.current.value;
     const feedback = feedbackRef.current.value;
 
     // new item
-    const newReview = { userName, brand, feedback };
+    const newReview = { userName, brand, rating, feedback };
 
     // fetch data
     fetch("https://blooming-mesa-69850.herokuapp.com/reviews", {
@@ -55,25 +57,44 @@ const UserReview = () => {
                 <input
                   type="text"
                   ref={nameRef}
-                  className="form-control  border-secondary rounded-pill"
+                  className="form-control  border-secondary "
                   placeholder="Name"
                   required
                 />
               </div>
-              <div className="mb-2">
-                <label
-                  htmlFor="exampleFormControlInput1"
-                  className="form-label"
-                >
-                  Vehicle
-                </label>
-                <input
-                  type="text"
-                  ref={brandRef}
-                  className="form-control  border-secondary rounded-pill"
-                  placeholder="Name"
-                  required
-                />
+              <div className="row">
+                <div className="mb-2 col-md-9">
+                  <label
+                    htmlFor="exampleFormControlInput1"
+                    className="form-label"
+                  >
+                    Your Vehicle
+                  </label>
+                  <input
+                    type="text"
+                    ref={brandRef}
+                    className="form-control  border-secondary"
+                    placeholder="Your Vehicle"
+                    required
+                  />
+                </div>
+                <div className="mb-2 col-md-3">
+                  <label
+                    htmlFor="exampleFormControlInput1"
+                    className="form-label"
+                  >
+                    Rating
+                  </label>
+                  <input
+                    type="number"
+                    min="1"
+                    max="5"
+                    ref={ratingRef}
+                    className="form-control  border-secondary"
+                    placeholder="Rate"
+                    required
+                  />
+                </div>
               </div>
               <div class="mb-3">
                 <label for="exampleFormControlTextarea1" className="form-label">

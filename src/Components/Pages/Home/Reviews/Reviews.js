@@ -5,7 +5,7 @@ import Review from "../Review/Review";
 const Reviews = () => {
   const [reviews, setReviews] = useState([]);
   useEffect(() => {
-    fetch("/review.json")
+    fetch("https://blooming-mesa-69850.herokuapp.com/reviews")
       .then(res => res.json())
       .then(data => setReviews(data));
   }, []);
@@ -18,7 +18,7 @@ const Reviews = () => {
           <hr />
         </div>
       </div>
-      <div className="row row-cols-1 row-cols-md-4 pb-5 my-3 px-0 g-2 w-75 mx-auto ">
+      <div className="row row-cols-1 row-cols-md-4 pb-3 mt-3 px-0 g-2 w-75 mx-auto ">
         {reviews.slice(reviews.length - 4, reviews.length).map(review => (
           <Review
             key={review.id}
@@ -26,8 +26,13 @@ const Reviews = () => {
             // handleBooking={handlebooking}
           ></Review>
         ))}
-
-        <Link to="reviews">See All Reviews</Link>
+      </div>
+      <div className="text-center">
+        <Link to="reviews">
+          <button className="btn btn-outline-warning mx-auto w-25 my-3 fs-5">
+            All Reviews Here
+          </button>
+        </Link>
       </div>
     </div>
   );

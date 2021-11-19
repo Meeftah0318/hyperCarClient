@@ -4,7 +4,7 @@ import Review from "../Home/Review/Review";
 const ReviewPg = () => {
   const [reviews, setReviews] = useState([]);
   useEffect(() => {
-    fetch("/review.json")
+    fetch("https://blooming-mesa-69850.herokuapp.com/reviews")
       .then(res => res.json())
       .then(data => setReviews(data));
   }, []);
